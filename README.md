@@ -12,15 +12,17 @@ TON Token Marketplace v3 — это не просто торговая плат�
 🛡 Предупреждает о рисках и аномалиях
 🤖 Работает через многоагентную архитектуру ИИ 
 📁 Структура проекта
-DKIP/
-├── main.py
-├── agents.py
-├── ton_integration.py
-├── config.py
-├── database.py
-├── ai_models.py
-├── requirements.txt
-└── .env.example
+
+    DKIP/
+    ├── main.py
+    ├── agents.py
+    ├── ton_integration.py
+    ├── config.py
+    ├── database.py
+    ├── ai_models.py
+    ├── requirements.txt
+    └── .env.example
+
 🚀 Основные возможности
 🤖 Многоагентная система ИИ
 Проект состоит из трёх специализированных агентов, работающих в единой системе:
