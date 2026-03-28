@@ -13,15 +13,14 @@ TON Token Marketplace v3 — это не просто торговая плат�
 🤖 Работает через многоагентную архитектуру ИИ 
     
     📁 Структура проекта
-    DKIP/
-    ├── main.py
-    ├── agents.py
-    ├── ton_integration.py
-    ├── config.py
-    ├── database.py
-    ├── ai_models.py
-    ├── requirements.txt
-    └── .env.example
+    workspace/
+    ├── main.py              # Основной файл Telegram бота
+    ├── agents.py            # Многоагентная система ИИ (MarketAnalyzer, RiskAdvisor, PersonalTrader)
+    ├── ton_integration.py   # Интеграция с TonAPI для работы с блокчейном TON
+    ├── config.py            # Конфигурация приложения
+    ├── database.py          # Работа с базой данных (SQLite)
+    ├── requirements.txt     # Зависимости Python
+    └── .env.example         # Пример файла окружения
 
 # 🚀 TON Token Marketplace v3: Многоагентный ИИ-Ассистент для Крипто-Торговли
 
@@ -77,9 +76,8 @@ TON Token Marketplace v3 — это не просто торговая плат�
 
 ### 1. Подготовка окружения
 ```bash
-# Создаем директорию проекта
-mkdir ton_token_marketplace
-cd ton_token_marketplace
+# Клонируем репозиторий (если еще не клонирован)
+cd /workspace
 
 # Создаем виртуальное окружение
 python -m venv venv
@@ -88,5 +86,28 @@ source venv/bin/activate  # Linux/MacOS
 
 # Устанавливаем зависимости
 pip install -r requirements.txt
+
+# Копируем файл окружения и настраиваем переменные
+cp .env.example .env
+# Отредактируйте .env и добавьте свои ключи:
+# - TELEGRAM_BOT_TOKEN (получите у @BotFather)
+# - TON_API_KEY (получите на https://tonconsole.com)
+```
+
+### 2. Запуск бота
+```bash
+python main.py
+```
+
+### 3. Использование
+Откройте Telegram и найдите вашего бота по токену. Доступные команды:
+
+- `/start` - Запустить бота
+- `/help` - Показать справку
+- `/dkip` - Специальный анализ мета-токена DKIP
+- `/analyze <адрес>` - Анализ конкретного токена
+- `/risk <адрес>` - Оценка рисков токена
+- `/portfolio` - Ваш портфель
+- `/settings` - Настройки профиля риска
 
 ✅ Готово к запуску. Начните торговать умнее — с ИИ в вашем кармане.
