@@ -11,12 +11,12 @@ from typing import Optional, Dict, Any
 from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QPushButton, QTextEdit, QLineEdit, QTabWidget,
-    QProgressBar, QStatusBar, QMenu, QMenuBar, QAction,
+    QProgressBar, QStatusBar, QMenu, QMenuBar,
     QSplitter, QFrame, QScrollArea, QSizePolicy, QMessageBox,
     QDialog, QDialogButtonBox, QFormLayout, QComboBox
 )
 from PyQt6.QtCore import Qt, QThread, pyqtSignal, QTimer, QMetaObject
-from PyQt6.QtGui import QFont, QColor, QIcon, QActionGroup
+from PyQt6.QtGui import QFont, QColor, QIcon, QAction
 
 from agents import MarketAnalyzer, RiskAdvisor, PersonalTrader
 from ton_integration import TonAPIWrapper
